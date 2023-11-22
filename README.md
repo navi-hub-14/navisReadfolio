@@ -1,6 +1,4 @@
 # Book Review Website Documentation
-# Introduction:
-Welcome to the documentation section of the Book Review website, a project completed as part of the Udemy Web Development Bootcamp led by Angela Yu. This challenge focused on creating a database-driven website to manage and review books, allowing users to read, add, edit, and delete book details.
 
 # Overview:
 The Book Review website enables users to interact with a database containing details of books they've read or plan to read. The website provides functionalities to manipulate book data while ensuring that certain features, like editing and deletion, are restricted to authorized users.
