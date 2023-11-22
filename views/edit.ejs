@@ -1,0 +1,17 @@
+<%- include("partials/header.ejs")  %>
+
+
+<section id="edit" class="container" >
+    <h1 class="heading">Edit Book Review</h1>
+    <form action="/publish/<%=book.bookid %>" method="Post" class="add">
+        <input type="text" name="title" class=" input" placeholder="Title" value="<%= book.title  %>" required>
+        <input type="text"  name="author" class=" input"  placeholder="Author" value="<%= book.author  %>" required>
+        <input type="text"  name="isbn" class=" input"  placeholder="ISBN" value="<%= book.isbn  %>" >
+        <input type="number"  name="rating" class=" input" step="0.01" min="1" max="5"  placeholder="Rate" value="<%= book.rating  %>" required>
+        <input type="text"  name="coverurl" class=" input"  placeholder="Image url" value="<%= book.coverurl  %>">
+        <textarea id="wide-text" name="review" class="input" rows="5" cols="40" required placeholder="Enter your Note"><%= book.review %></textarea>
+        <input type="submit" class="btn" value="Publish"/>
+    </form>
+</section>
+
+<%- include("partials/footer.ejs")  %>

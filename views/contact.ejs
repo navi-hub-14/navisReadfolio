@@ -1,0 +1,37 @@
+<%- include("partials/header") %>
+    <section id="contact" class="container">
+        <h1>Contact Me</h1>
+        <p>"Feel free to reach out by sending an email to <em class='email'>maunykrishna@gmail.com</em> , <br>or share
+            your thoughts below in the comment box!"</p>
+
+        <form action="/contact" method="POST" class="comment">
+            <label for="name">Name: </label>
+            <input type="text" name="name" id="name">
+            <label for="comment">Comment: </label>
+            <textarea type="text" name="comment" id="comment"></textarea>
+            <input type="submit" class="btn" value="Submit"></input>
+        </form>
+        <hr>
+        <% if(locals.comments){ %>
+            <% comments.forEach(comment => {%>
+                <div class="dispComment ">
+                    <div class="person">
+                        <strong><%= comment.name %></strong>
+                        <em class="date"><%= comment.ondate.toLocaleDateString(undefined, { year: 'numeric', month: 'numeric', day: 'numeric' })  %></em>
+                    </div>
+                    <div class="text">
+                        <p class="initContent"><%= comment.comment.slice(0,40)+"..." %>
+                            <span class="hiddenText" style="display: none;"><%= comment.comment.slice(40, ) %></span>
+                            <span class="seemore"><button onclick=showHide()>See More</button></span>
+                        </p>
+                        <!-- <span class="reply"><button onclick=showHide()>Reply</button></span> -->
+                    </div>
+                </div>
+                <br>
+               <%  }); %>
+
+            <% } %>
+    </section>
+    
+
+    <%- include("partials/footer") %>

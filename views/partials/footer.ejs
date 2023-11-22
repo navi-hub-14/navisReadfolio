@@ -1,0 +1,49 @@
+<footer class="footer">
+    <div class="copyright">
+        CopyRight &copy; <%= new Date().getFullYear() %> NavisReadfolio
+    </div>
+    <div class="reference">
+        Book Cover Image courtesy <a class="link" href="https://openLibrary.org" target="_blank">Open Library</a>
+    </div>
+</footer>
+
+
+
+
+<script>
+    const seemore = document.querySelectorAll(".seemore button");
+    seemore.forEach(seemore => {
+        const parent = seemore.closest('.text');
+        const hiddenText = parent.querySelector(".hiddenText");
+        seemore.style.color = "blue";
+        seemore.addEventListener("click", () => {
+            if (hiddenText.style.display === "none" || hiddenText.style.display === "") {
+                hiddenText.style.display = "block";
+                seemore.textContent = "See Less";
+            }
+            else {
+                seemore.textContent = "See More";
+                hiddenText.style.display = "none";
+            }
+        })
+    })
+
+   
+    function toggleMenu() {
+  const burgerMenu = document.querySelector('.burger-menu');
+  burgerMenu.classList.toggle('clicked');
+
+  const navLinks = document.querySelector('.navbar ul');
+  navLinks.style.visibility = (navLinks.style.visibility === 'hidden') ? 'hidden' : 'visible';
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  const burgerMenu = document.querySelector('.burger-menu');
+  burgerMenu.addEventListener('click', toggleMenu);
+});
+
+     
+</script>
+</body>
+
+</html>

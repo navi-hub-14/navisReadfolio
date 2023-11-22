@@ -1,0 +1,408 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+body {
+    
+    background: linear-gradient(440deg, transparent 33.3%, transparent 33.3%, transparent 66.6%, saddlebrown 66.6%, saddlebrown 100%),
+        linear-gradient(460deg, saddlebrown 33.3%, sandybrown 33.3%, sandybrown 66.6%, sandybrown 66.6%, sandybrown 100%);
+    background-repeat: no-repeat;
+    background-size: 100vw 100%;
+    background-position: center;
+    padding-top: 100px;
+    width: 100%;
+   
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background: sandybrown;
+    backdrop-filter: blur(5px);
+    padding-block: 30px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: black;
+    font-size: 12pt;
+    font-weight: 700;
+    cursor: pointer;
+    /* background-color: white; */
+    padding: 5px 15px 5px 15px;
+    /* border: 1px solid black; */
+    border-radius: 5px;
+    /* box-shadow: inset 2px 2px 2px black; */
+}
+
+.arrow {
+    font-size: 8.5pt;
+}
+
+.navbar a:hover {
+    background: wheat;
+    transition: all 0.3s linear;
+}
+
+.navbar ul {
+    display: flex;
+
+}
+
+.navbar ul li {
+    display: inline-block;
+    position: relative;
+    list-style: none;
+    margin-inline: 25px;
+}
+
+.navbar ul li a {
+    display: block;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 4px 0;
+}
+
+.logo a {
+    font-size: 18pt;
+}
+
+ul.drop-down li {
+    display: block;
+    color: black;
+}
+
+ul.drop-down {
+    width: 160px;
+    position: absolute;
+    z-index: 99;
+    display: none;
+    transition: all 0.5 ease-in-out;
+}
+
+ul.drop-down a {
+    background: sandybrown;
+    transform:  translate(-25%);
+}
+
+.navbar ul li:hover ul.drop-down {
+    display: block;
+}
+
+
+/* Main Book Notes */
+.container {
+    max-width: 60%;
+    min-width: 300px;
+    margin: 25px auto;
+    background: rgba(255, 255, 255, 0.188);
+    backdrop-filter: blur(15px);
+    padding: 35px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px black, inset 0 0 5px white;
+}
+
+hr {
+    border: 1px solid saddlebrown;
+    margin-block: 15px;
+}
+
+.heading {
+    font-size: 2rem;
+    text-align: center;
+    padding: 30px;
+}
+
+.flexRow {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    text-align: left;
+    /* line-height: 30px; */
+}
+
+.flexRow img,
+.noCover {
+    border-radius: 0 10px 10px 0;
+    box-shadow: 2px 2px 2px black;
+    border: 2px solid rgba(0, 0, 0, 0.748);
+    height: 200px;
+    transition: all 0.3s linear;
+    outline-offset: -7px;
+    outline: 6px solid rgb(203, 203, 203);
+    padding: 4.5px;
+    color: black;
+}
+
+.noCover {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 130px;
+    background-color: rgb(255, 255, 255);
+}
+
+.noCover p {
+    padding-inline: 10px;
+    text-align: center;
+}
+
+.flexRow img:hover,
+.noCover:hover {
+    transform: perspective(500px) rotateY(-25deg);
+}
+
+.bookDetails {
+    padding: 20px;
+
+}
+
+.review {
+    font-size: 18pt;
+    padding: 20px;
+}
+
+.link {
+    font-size: 12pt;
+    color: saddlebrown;
+}
+
+.link:hover {
+    color: rgb(253, 245, 238);
+    text-shadow: 1px 1px 5px black;
+}
+
+/* ADD NEW BOOK */
+
+.add {
+    display: flex;
+    flex-direction: column;
+}
+
+.add * {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+
+.add *:focus {
+    outline: 1px solid grey;
+
+}
+
+.btn,
+.edit a,
+.delete a {
+    width: 40%;
+    box-shadow: inset 2px 2px 10px sandybrown;
+    background-color: saddlebrown;
+    color: sandybrown;
+    font-size: 15pt;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 5px;
+    border: none;
+}
+
+.btn:hover {
+    box-shadow: inset 2px 2px 10px rgb(0, 0, 0);
+
+}
+
+/* FOOTER */
+
+.footer {
+    position: relative;
+    /* max-width: 100vw;
+    min-width: 350px; */
+    /* width: 100vw; */
+    bottom: 0;
+    padding: 25px;
+    background-color: black;
+    color: sandybrown;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer a {
+    color: wheat
+}
+
+
+/* Docs css */
+.docs>p {
+    padding: 10px;
+}
+
+.docs span {
+    font-weight: bold;
+}
+
+.docs ul,
+ol {
+    padding: 15px;
+    list-style-type: disc;
+}
+
+.docs ul li {
+    padding: 5px;
+}
+
+.docs a {
+    text-decoration: none;
+    color: blueviolet;
+}
+
+.docs a:hover {
+    color: saddlebrown;
+}
+
+/* CONTACT */
+#contact {
+    font-size: 14pt;
+    line-height: 32px;
+}
+
+.email {
+    background-color: wheat;
+    padding: 8px 10px;
+    box-shadow: inset 1px 2px 5px black;
+    border-radius: 50px;
+    color: saddlebrown
+}
+
+/* comment */
+.comment {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: auto;
+}
+
+.comment *:not(label) {
+    margin: auto;
+}
+
+.comment input,
+.comment textarea,
+.dispComment {
+    width: 90%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+
+}
+
+.comment *:not(label):focus {
+    outline: 1px solid grey;
+}
+
+.comment textarea {
+    height: 100px;
+}
+
+.comment input[type=submit] {
+    margin-block: 15px;
+    width: 50%;
+}
+
+.dispComment {
+    padding: 10px;
+    background: linear-gradient(sandybrown, saddlebrown);
+    margin: auto;
+    line-height: 18px;
+}
+
+.dispComment p {
+    padding: 5px;
+    border-radius: 5px;
+    overflow: auto;
+    /* height: 35px; */
+    font-size: 12pt;
+    background: white;
+}
+
+.person {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.person .date {
+    font-size: 10pt;
+}
+
+
+
+
+/* media query */
+@media screen and (max-width:700px) {
+    body {
+        /* background: linear-gradient(-100deg,  saddlebrown 50%, sandybrown 50%); */
+        background-size: 200%;
+        background-position: center;
+
+    }
+
+    .navbar {
+        width: 100%;
+        padding-block: 15px;
+        flex-flow: wrap;
+    }
+
+    .navbar ul {
+        background-color: sandybrown;
+        width: auto;
+    }
+
+    .navbar ul li {
+        margin-inline: 0px;
+    }
+
+    .navbar ul li a {
+        width: 40px;
+        margin-inline: 0px;
+        font-size: 10pt;
+    }
+
+    .arrow {
+        font-size: 10px;
+        display: inline-block;
+    }
+
+    .logo a {
+        font-size: 12pt;
+    }
+
+    .footer {
+        font-size: 12px;
+        min-width: 325px;
+    }
+
+    .footer a {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width:300px) {
+    body {
+        background-size: 350% 100%;
+    }
+}

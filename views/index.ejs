@@ -1,0 +1,51 @@
+<%- include("partials/header.ejs") %>
+    <main id="main" class="container">
+        <h1 class="heading">Book Notes</h1>
+        <% if(locals.books){ %>
+            <% books.forEach(book=> { %>
+                <div class="flexRow">
+                    <div class="image">
+                        <% if(book.coverurl !=='' ){ %>
+
+                            <img src="<%= book.coverurl %>" alt="<%= book.title %>" class="cover">
+                            <% } else {%>
+                                <div class="noCover">
+                                    <p>
+                                        <%= book.title %>
+                                    </p>
+                                    <p>by</p>
+                                    <p>
+                                        <%= book.author %>
+                                    </p>
+                                </div>
+                                <% } %>
+                    </div>
+                    <div class="bookDetails">
+                        <h2 style="white-space: pre-line;" class="bookTitle">
+                            <%= book.title %>
+                        </h2>
+                        <h3>by <%= book.author %>
+                        </h3>
+                        <p>ISBN: <%= book.isbn %>
+                        </p>
+                        <p><span class="star">&starf;&starf;&starf;&starf;&starf;</span>
+                            <%= book.rating %>
+                        </p>
+                        <p><em class="date">
+                                <%= book.dateadded.toLocaleDateString(undefined, { year: 'numeric' , month: 'long' ,
+                                    day: 'numeric' }) %>
+                            </em></p>
+                    </div>
+                </div>
+                <div class="review">
+                    <p style="white-space: pre-line;">
+                        <%= book.review.slice(0,97)+"..." %> <a class="link" href="/read/<%= book.bookid %>">Read
+                                More</a>
+                    </p>
+                </div>
+                <hr>
+                <% }); %>
+                    <% } %>
+    </main>
+
+    <%- include("partials/footer.ejs") %>

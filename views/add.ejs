@@ -1,0 +1,14 @@
+<%- include("partials/header") %>
+    <section id="add" class="container" >
+        <h1 class="heading">Add New Book Review</h1>
+        <form action="/mauny" method="POST" class="add">
+            <input type="text" name="title" class=" input" placeholder="Title" required>
+            <input type="text"  name="author" class=" input"  placeholder="Author" required>
+            <input type="text"  name="isbn" class=" input"  placeholder="ISBN" >
+            <input type="number"  name="rating" class=" input" step="0.01" min="1" max="5"  placeholder="Rate" required>
+            <input type="text"  name="coverurl" class=" input"  placeholder="Image url">
+            <textarea id="wide-text" name="review" class="input" rows="5" cols="40" required placeholder="Enter your Note"></textarea>
+            <input type="submit" class="btn" value="Publish"/>
+        </form>
+    </section>
+<%- include("partials/footer") %>

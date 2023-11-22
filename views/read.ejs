@@ -1,0 +1,28 @@
+
+<%- include("partials/header.ejs") %>
+<section id="read" class="container">
+    <h1 class="heading">Book Notes</h1>
+    <% if(locals.book){ %> 
+            <div class="flexRow">
+                <div class="image">
+                <img src="<%= book.coverurl %>" alt="<%= book.title %>" class="cover">
+                </div>
+                <div class="bookDetails" >
+                    <h2 style="white-space: pre-line;" class="bookTitle"><%= book.title %></h2>
+                    <h3>by <%= book.author %></h3>
+                    <p>ISBN: <%= book.isbn %></p>
+                    <p><span class="star">&starf;&starf;&starf;&starf;&starf;</span>  <%= book.rating %></p>
+                    <p><em class="date"><%= book.dateadded.toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' })  %></em></p>
+                </div>
+            </div>
+            <div class="review">
+                <p style="white-space: pre-line;"><%= book.review %></p>
+            </div>
+            <br>
+            <hr>
+            <br>
+            
+    <%  } %>
+</section>
+
+<%- include("partials/footer.ejs") %>
