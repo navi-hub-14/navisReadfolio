@@ -388,6 +388,7 @@ ol {
     .navbar ul li a {
         width: 40px;
         margin-inline: 0px;
+        padding-inline: 2px;
         font-size: 10pt;
     }
     .bookTitle,  .review{
