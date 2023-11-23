@@ -75,7 +75,9 @@ body {
 .logo a {
     font-size: 18pt;
 }
-
+.sort{
+    width: 60px;
+}
 ul.drop-down li {
     display: block;
     color: black;
@@ -387,7 +389,7 @@ ol {
     }
 
     .navbar ul li a {
-        width: 40px;
+        width: 60px;
         margin-inline: 0px;
         padding-inline: 2px;
         font-size: 10pt;
@@ -420,5 +422,5 @@ ol {
     body {
         background-size: 350% 100%;
     }
-   
+  
 }
