@@ -81,7 +81,7 @@ app.get(`/${process.env.ADD}`, (req, res)=>{
 //The data newly added details will be inserted to the book table and it will shown in the main page
 app.post(`/${process.env.ADD}`, async (req, res)=>{
     const books = req.body;
-    console.log(books);
+    
     try{
         const query = {
             text: 'INSERT INTO books (title, author, isbn, rating, review, coverurl) VALUES ($1, $2, $3, $4, $5, $6)',
@@ -99,7 +99,7 @@ app.post(`/${process.env.ADD}`, async (req, res)=>{
 //Get a particular user defined book details. This will shown in a seperate page.
 app.get("/read/:id", async(req, res)=>{
     const id = req.params.id;
-    console.log(id);
+
     try{
         const query = {
             text: 'Select * from books where bookid = $1',
@@ -114,9 +114,9 @@ app.get("/read/:id", async(req, res)=>{
 })
 
 //Authorized users can Edit a particular book details 
-app.get("/read/:id/edit", async(req, res)=>{
+app.get(`/read/:id/${process.env.ADD}/edit`, async(req, res)=>{
     const id = req.params.id;
-    console.log(id);
+
     try{
         const query = {
             text: 'select * from books where bookid = $1',
@@ -134,8 +134,7 @@ app.get("/read/:id/edit", async(req, res)=>{
 app.post("/publish/:id", async(req, res)=>{
     const id = req.params.id;
     const book = req.body;
-    console.log(book)
-    console.log(id);
+    
     try{
         const query = {
             text: 'Update books Set title=$1, author=$2, isbn=$3, rating=$4, coverurl=$5, review=$6 Where bookid=$7',
@@ -152,7 +151,6 @@ app.post("/publish/:id", async(req, res)=>{
 //Authorized users can Delete a particular book details 
 app.get(`/read/:id/${process.env.DELETE}`, async (req,res)=>{
     const id = req.params.id;
-    console.log(id);
     const query={
         text: `Delete From books Where bookid=$1`,
         values: [id]
