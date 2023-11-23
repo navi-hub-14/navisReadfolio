@@ -14,8 +14,17 @@ const db = new pg.Client({
     user: process.env.DB_USER,
     database: process.env.DB_DATABASE,
     password: process.env.DB_PASSWORD,
-    port: process.env.DB_PORT
+    port: process.env.DB_PORT,
+    ssl: true
 })
+
+// const db = new pg.Client({
+//     connectionString: connectionString,
+//     ssl: {
+//       rejectUnauthorized: false, // Necessary if using self-signed certificates (not recommended for production)
+//     },
+//   });
+
 db.connect();
 
 app.use(express.static("public"));
