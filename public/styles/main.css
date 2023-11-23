@@ -79,7 +79,10 @@ body {
     width: 60px;
 }
 ul.drop-down li {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     color: black;
 }
 
@@ -89,14 +92,18 @@ ul.drop-down {
     z-index: 99;
     display: none;
     transition: all 0.5 ease-in-out;
+    width: fit-content;
+    border-radius: 10px;
 }
 
 ul.drop-down a {
     background: sandybrown;
-    transform:  translate(-25%);
+    font-size: 9pt;
+    width: 60px;
 }
 
 .navbar ul li:hover ul.drop-down {
+    background-color: transparent;
     display: block;
 }
 
@@ -393,6 +400,10 @@ ol {
         margin-inline: 0px;
         padding-inline: 2px;
         font-size: 10pt;
+    }
+ 
+    ul.drop-down li a{
+        font-size: 8pt;
     }
     .bookTitle,  .review{
         font-size: 15pt;
