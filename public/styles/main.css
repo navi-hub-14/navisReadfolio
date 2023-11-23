@@ -10,7 +10,7 @@ body {
         linear-gradient(460deg, saddlebrown 33.3%, sandybrown 33.3%, sandybrown 66.6%, sandybrown 66.6%, sandybrown 100%);
     background-repeat: no-repeat;
     background-size: 100vw 100%;
-    background-position: center;
+    background-position: bottom;
     padding-top: 100px;
     width: 100%;
    
@@ -36,11 +36,8 @@ body {
     font-size: 12pt;
     font-weight: 700;
     cursor: pointer;
-    /* background-color: white; */
     padding: 5px 15px 5px 15px;
-    /* border: 1px solid black; */
     border-radius: 5px;
-    /* box-shadow: inset 2px 2px 2px black; */
 }
 
 .arrow {
@@ -106,12 +103,14 @@ ul.drop-down a {
 .container {
     max-width: 60%;
     min-width: 300px;
+    height: 90vh;
     margin: 25px auto;
     background: rgba(255, 255, 255, 0.188);
     backdrop-filter: blur(15px);
     padding: 35px;
     border-radius: 10px;
     box-shadow: 2px 2px 8px black, inset 0 0 5px white;
+    overflow: auto;
 }
 
 hr {
@@ -229,9 +228,7 @@ hr {
 
 .footer {
     position: relative;
-    /* max-width: 100vw;
-    min-width: 350px; */
-    /* width: 100vw; */
+    width: 100%;
     bottom: 0;
     padding: 25px;
     background-color: black;
@@ -405,4 +402,10 @@ ol {
     body {
         background-size: 350% 100%;
     }
+    .bookTitle,  .review{
+        font-size: 16pt;
+    }
+   footer{
+    flex-direction: column;
+   }
 }
