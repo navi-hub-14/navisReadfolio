@@ -294,7 +294,8 @@ ol {
     padding: 8px 10px;
     box-shadow: inset 1px 2px 5px black;
     border-radius: 50px;
-    color: saddlebrown
+    color: saddlebrown;
+    font-size: 12pt;
 }
 
 /* comment */
