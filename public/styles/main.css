@@ -112,6 +112,16 @@ ul.drop-down a {
     box-shadow: 2px 2px 8px black, inset 0 0 5px white;
     overflow: auto;
 }
+.container::-webkit-scrollbar-track{
+    background: transparent;
+}
+.container::-webkit-scrollbar{
+    width: 8px;
+}
+.container::-webkit-scrollbar-thumb{
+    background-color: white
+    ;
+}
 
 hr {
     border: 1px solid saddlebrown;
@@ -228,7 +238,6 @@ hr {
 
 .footer {
     position: relative;
-    width: 100%;
     bottom: 0;
     padding: 25px;
     background-color: black;
@@ -247,9 +256,12 @@ hr {
 .docs>p {
     padding: 10px;
 }
-
+.docs{
+    font-size: 16pt;
+}
 .docs span {
     font-weight: bold;
+    font-size: 18pt;
 }
 
 .docs ul,
@@ -378,6 +390,9 @@ ol {
         margin-inline: 0px;
         font-size: 10pt;
     }
+    .bookTitle,  .review{
+        font-size: 15pt;
+    }
 
     .arrow {
         font-size: 10px;
@@ -389,6 +404,7 @@ ol {
     }
 
     .footer {
+        flex-direction: column;
         font-size: 12px;
         min-width: 325px;
     }
@@ -402,10 +418,5 @@ ol {
     body {
         background-size: 350% 100%;
     }
-    .bookTitle,  .review{
-        font-size: 16pt;
-    }
-   footer{
-    flex-direction: column;
-   }
+   
 }
