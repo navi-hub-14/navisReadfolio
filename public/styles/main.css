@@ -6,8 +6,7 @@
 
 body {
     
-    background: linear-gradient(440deg, transparent 33.3%, transparent 33.3%, transparent 66.6%, saddlebrown 66.6%, saddlebrown 100%),
-        linear-gradient(460deg, saddlebrown 33.3%, sandybrown 33.3%, sandybrown 66.6%, sandybrown 66.6%, sandybrown 100%);
+    background:rgb(243, 215, 195);
     background-repeat: no-repeat;
     background-size: 100vw 100%;
     background-position: bottom;
@@ -25,7 +24,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    background: sandybrown;
+    background: rgba(244, 165, 96, 0.618);
     backdrop-filter: blur(5px);
     padding-block: 30px;
 }
@@ -195,7 +194,7 @@ hr {
 
 .link {
     font-size: 12pt;
-    color: saddlebrown;
+    color: rgb(243, 221, 205);
 }
 
 .link:hover {
@@ -344,7 +343,7 @@ ol {
 
 .dispComment {
     padding: 10px;
-    background: linear-gradient(sandybrown, saddlebrown);
+    background: linear-gradient(sandybrown, rgb(243, 215, 195));
     margin: auto;
     line-height: 18px;
 }
